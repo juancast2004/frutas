@@ -1,0 +1,89 @@
+.app {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  font-family: Arial, sans-serif;
+}
+
+h1, h2 {
+  color: #2c3e50;
+}
+
+.fruta-form {
+  background: #f9f9f9;
+  padding: 1.5rem;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+}
+
+.fruta-form label {
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.fruta-form input {
+  width: 100%;
+  padding: 0.5rem;
+  margin-top: 0.3rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.fruta-form button {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  margin-right: 0.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.fruta-form button:hover {
+  background-color: #45a049;
+}
+
+.frutas-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.fruta-card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 1rem;
+  text-align: center;
+}
+
+.fruta-card img {
+  max-width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.fruta-actions {
+  margin-top: 1rem;
+}
+
+.fruta-actions button {
+  padding: 0.3rem 0.6rem;
+  margin: 0 0.3rem;
+  cursor: pointer;
+}
+
+.fruta-actions button:first-child {
+  background-color: #2196F3;
+  color: white;
+  border: none;
+  border-radius: 4px;
+}
+
+.fruta-actions button:last-child {
+  background-color: #f44336;
+  color: white;
+  border: none;
+  border-radius: 4px;
+}
+

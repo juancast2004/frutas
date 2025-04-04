@@ -1,0 +1,404 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: #213547;
+  background-color: #ffffff;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+.navbar {
+  background-color: #4CAF50;
+  padding: 1rem;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  margin: 0 1rem;
+  padding: 0.5rem;
+}
+
+.navbar a:hover {
+  text-decoration: underline;
+}
+
+.fruta-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 500px;
+  margin: 2rem auto;
+  padding: 2rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+.fruta-form label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.fruta-form input {
+  padding: 0.5rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.fruta-form button {
+  padding: 0.75rem;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.fruta-form button:hover {
+  background-color: #45a049;
+}
+
+.frutas-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.fruta-card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 1rem;
+  text-align: center;
+}
+
+.fruta-card img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 4px;
+}
+
+.fruta-actions {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.btn-edit, .btn-add {
+  padding: 0.5rem 1rem;
+  background-color: #2196F3;
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+}
+
+.btn-delete {
+  padding: 0.5rem 1rem;
+  background-color: #f44336;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.btn-add {
+  display: inline-block;
+  margin: 1rem;
+}
+
+.home {
+  text-align: center;
+  padding: 2rem;
+}
+
+/* Estilos generales responsivos */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    padding: 1rem 0.5rem;
+  }
+  
+  .navbar .links {
+    margin-top: 1rem;
+  }
+  
+  .navbar a {
+    margin: 0 0.5rem;
+    padding: 0.3rem;
+  }
+  
+  .fruta-form, .frutas-grid, .home {
+    padding: 1rem;
+  }
+  
+  .frutas-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Estilos específicos para la página de inicio */
+.home {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.frutas-list-home {
+  margin: 2rem 0;
+  background: #f9f9f9;
+  padding: 1.5rem;
+  border-radius: 8px;
+}
+
+.frutas-list-basic {
+  list-style: none;
+  padding: 0;
+}
+
+.fruta-item-home {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.8rem;
+  border-bottom: 1px solid #eee;
+}
+
+.fruta-item-home:last-child {
+  border-bottom: none;
+}
+
+.fruta-nombre {
+  font-weight: bold;
+  flex: 2;
+}
+
+.fruta-info {
+  flex: 2;
+  color: #666;
+  text-align: right;
+  margin-right: 1rem;
+}
+
+.edit-link {
+  flex: 1;
+  background: #2196F3;
+  color: white;
+  text-decoration: none;
+  padding: 0.3rem 0.6rem;
+  border-radius: 4px;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+.no-frutas {
+  text-align: center;
+  padding: 1rem;
+  color: #666;
+}
+
+.no-frutas a {
+  color: #4CAF50;
+  text-decoration: none;
+}
+
+.home-actions {
+  display: flex;
+  gap: 1rem;
+  margin-top: 2rem;
+  flex-wrap: wrap;
+}
+
+.btn-ver-todas, .btn-agregar {
+  padding: 0.8rem 1.5rem;
+  border-radius: 4px;
+  text-decoration: none;
+  flex: 1;
+  text-align: center;
+  min-width: 150px;
+}
+
+.btn-ver-todas {
+  background: #2196F3;
+  color: white;
+}
+
+.btn-agregar {
+  background: #4CAF50;
+  color: white;
+}
+
+/* Mejoras para móviles en el listado principal */
+@media (max-width: 480px) {
+  .fruta-item-home {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .fruta-info {
+    text-align: left;
+    margin: 0.3rem 0;
+  }
+  
+  .edit-link {
+    align-self: flex-end;
+  }
+  
+  .home-actions {
+    flex-direction: column;
+  }
+}
+
+/* Estilos para el listado completo */
+.frutas-list {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.list-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.btn-add {
+  padding: 0.5rem 1rem;
+  background-color: #4CAF50;
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+}
+
+.no-frutas {
+  text-align: center;
+  grid-column: 1 / -1;
+  padding: 2rem;
+  color: #666;
+}
+
+.no-frutas a {
+  color: #4CAF50;
+  text-decoration: none;
+}
+
+/* Estilos para el formulario de edición */
+.edit-fruta {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.fruta-form {
+  background: #f9f9f9;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.fruta-form label {
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.fruta-form input {
+  width: 100%;
+  padding: 0.8rem;
+  margin-top: 0.5rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.form-actions {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.btn-submit {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+  flex: 1;
+}
+
+.btn-cancel {
+  background-color: #f44336;
+  color: white;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+  flex: 1;
+}
+
+.btn-submit:hover {
+  background-color: #45a049;
+}
+
+.btn-cancel:hover {
+  background-color: #d32f2f;
+}
+
+/* Estilos para el logo y título */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #4CAF50;
+  color: white;
+}
+
+.logo-title {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.logo {
+  height: 50px;
+  width: auto;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid white;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    padding: 1rem;
+  }
+  
+  .logo-title {
+    margin-bottom: 1rem;
+  }
+  
+  .logo {
+    height: 40px;
+  }
+}
